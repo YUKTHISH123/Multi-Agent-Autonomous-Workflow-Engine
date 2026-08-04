@@ -1,22 +1,22 @@
-Multi-Agent Autonomous Workflow Engine
+# Multi-Agent Autonomous Workflow Engine 🤖⚡
 
-An autonomous, multi-agent AI system built with FastAPI, LangGraph, Groq API, and MongoDB. The engine orchestrates specialized LLM agents (Researcher, Code Writer, and Reviewer) working in a stateful execution loop to automatically research, code, review, and refine code solutions for multi-step software tasks.
-
----
-
-Key Features
-
-Autonomous Multi-Agent Orchestration**: Built using **LangGraph** stateful graphs with conditional feedback routing.
-Ultra-Fast LLM Inference**: Powered by Groq API (llama-3.3-70b-versatile).
-Clean Code Extraction**: Uses regex parsing to automatically extract pure executable Python code from conversational LLM output.
-Persistent Task Caching**: Integrates MongoDB to store execution histories, code outputs, and agent logs.
-Production-Ready REST API**: Fully asynchronous API built with **FastAPI** including interactive Swagger UI documentation.
+An autonomous, multi-agent AI system built with **FastAPI**, **LangGraph**, **Groq API**, and **MongoDB**. The engine orchestrates specialized LLM agents (Researcher, Code Writer, and Reviewer) working in a stateful execution loop to automatically research, code, review, and refine code solutions for multi-step software tasks.
 
 ---
 
-Architecture & Workflow
+## 🌟 Key Features
 
+* **Autonomous Multi-Agent Orchestration**: Built using **LangGraph** stateful graphs with conditional feedback routing.
+* **Ultra-Fast LLM Inference**: Powered by **Groq API** (`llama-3.3-70b-versatile`).
+* **Clean Code Extraction**: Uses regex parsing to automatically extract pure executable Python code from conversational LLM output.
+* **Persistent Task Caching**: Integrates **MongoDB** to store execution histories, code outputs, and agent logs.
+* **Production-Ready REST API**: Fully asynchronous API built with **FastAPI** including interactive Swagger UI documentation.
 
+---
+
+## 🏗️ Architecture & Workflow
+
+```text
        ┌──────────────┐
        │   User /     │
        │ API Request  │
@@ -42,23 +42,23 @@ Architecture & Workflow
     │ MongoDB Caching  │
     └──────────────────┘
 
-
+```text```
 
 🚀 Getting StartedPrerequisitesPython 3.10+Groq API KeyMongoDB (Local instance or MongoDB Atlas Cloud URI)Setup & InstallationClone the repository:
 
->>git clone [https://github.com/YOUR_GITHUB_USERNAME/multi-agent-engine.git](https://github.com/YOUR_GITHUB_USERNAME/multi-agent-engine.git)
->>cd multi-agent-engine
+>git clone [https://github.com/YOUR_GITHUB_USERNAME/multi-agent-engine.git](https://github.com/YOUR_GITHUB_USERNAME/multi-agent-engine.git)
+>cd multi-agent-engine
 Create and activate virtual environment:
->>python -m venv venv
+>python -m venv venv
 # On Windows PowerShell:
->>.\venv\Scripts\Activate.ps1
+>.\venv\Scripts\Activate.ps1
 Install dependencies:
->>pip install -r requirements.txt
+#pip install -r requirements.txt
 Environment Setup:Create a .env file in the root directory:Code snippet GROQ_API_KEY=your_groq_api_key_here
 MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/
 MONGO_DB_NAME=agent_engine
 Run the API:
->>uvicorn app.main:app --reload
+>uvicorn app.main:app --reload
 
 
 Open http://127.0.0.1:8000/docs in your browser to test endpoints via Swagger UI.📡
