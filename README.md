@@ -49,17 +49,22 @@ Install dependencies:
 
 
 >>pip install -r requirements.txt
+
+
 Environment Setup:
 Create a .env file in the root directory:
 
 Code snippet
-GROQ_API_KEY=your_groq_api_key_here
-MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/
-MONGO_DB_NAME=agent_engine
-Run the API:
 
-Bash
+>GROQ_API_KEY=your_groq_api_key_here
+
+>MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/
+
+>MONGO_DB_NAME=agent_engine
+
+Run the API:
 >>uvicorn app.main:app --reload
+
 Open http://127.0.0.1:8000/docs in your browser to test endpoints via Swagger UI.
 |
 
