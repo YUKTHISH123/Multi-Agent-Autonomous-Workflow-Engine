@@ -23,6 +23,46 @@ An autonomous, multi-agent AI system built with **FastAPI**, **LangGraph**, **Gr
 | `GET` | `/task/{task_id}` | Fetches stored execution record from MongoDB 
 
 ---
+
+🚀 Getting Started
+Prerequisites
+
+Python 3.10+
+
+Groq API Key
+
+MongoDB (Local instance or MongoDB Atlas Cloud URI)
+
+Setup & Installation
+Clone the repository:
+
+Bash
+>>git clone [https://github.com/YOUR_GITHUB_USERNAME/multi-agent-engine.git](https://github.com/YOUR_GITHUB_USERNAME/multi-agent-engine.git)
+>>cd multi-agent-engine
+
+Create and activate virtual environment:
+
+>>python -m venv venv
+# On Windows PowerShell:
+>>.\venv\Scripts\Activate.ps1
+Install dependencies:
+
+
+>>pip install -r requirements.txt
+Environment Setup:
+Create a .env file in the root directory:
+
+Code snippet
+GROQ_API_KEY=your_groq_api_key_here
+MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/
+MONGO_DB_NAME=agent_engine
+Run the API:
+
+Bash
+>>uvicorn app.main:app --reload
+Open http://127.0.0.1:8000/docs in your browser to test endpoints via Swagger UI.
+|
+
 ## 🏗️ Architecture & Workflow
 
 ```text
